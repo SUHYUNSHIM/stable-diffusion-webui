@@ -100,7 +100,7 @@ class Toprow:
             self.interrupt = gr.Button('Interrupt', elem_id=f"{self.id_part}_interrupt", elem_classes="generate-box-interrupt", tooltip="End generation immediately or after completing current batch")
             self.skip = gr.Button('Skip', elem_id=f"{self.id_part}_skip", elem_classes="generate-box-skip", tooltip="Stop generation of current batch and continues onto next batch")
             self.interrupting = gr.Button('Interrupting...', elem_id=f"{self.id_part}_interrupting", elem_classes="generate-box-interrupting", tooltip="Interrupting generation...")
-            self.submit = gr.Button('Generate', elem_id=f"{self.id_part}_generate", variant='primary', tooltip="Right click generate forever menu")
+            self.submit = gr.Button('생성하기', elem_id=f"{self.id_part}_generate", variant='primary', tooltip="Right click generate forever menu", elem_classes="generate-custom-button-class")
 
             def interrupt_function():
                 if not shared.state.stopping_generation and shared.state.job_count > 1 and shared.opts.interrupt_after_current:
@@ -142,3 +142,7 @@ class Toprow:
     def create_styles_ui(self):
         self.ui_styles = ui_prompt_styles.UiPromptStyles(self.id_part, self.prompt, self.negative_prompt)
         self.ui_styles.setup_apply_button(self.apply_styles)
+
+
+
+

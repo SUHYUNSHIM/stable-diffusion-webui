@@ -335,19 +335,23 @@ input[type="checkbox"].input-accordion-checkbox{
 .generate-box{
     position: relative;
 }
-.gradio-button.generate-box-skip, .gradio-button.generate-box-interrupt, .gradio-button.generate-box-interrupting{
+.gradio-button.generate-box-skip, .gradio-button.generate-box-interrupt, .gradio-button.generate-box-interrupting .generate-custom-button-class{
     position: absolute;
     width: 50%;
     height: 100%;
     display: none;
-    background: #b4c0cc;
+    background: rgb(97,25,233);
+    color : #ffffff;
+    box-shadow: none;
+    border-radius: 6px;
 }
 .gradio-button.generate-box-skip:hover, .gradio-button.generate-box-interrupt:hover, .gradio-button.generate-box-interrupting:hover{
     background: #c2cfdb;
+    box-shadow: none;
 }
 .gradio-button.generate-box-interrupt, .gradio-button.generate-box-interrupting{
     left: 0;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 6px;
 }
 .gradio-button.generate-box-skip{
     right: 0;
@@ -780,9 +784,9 @@ table.popup-table .link{
     position:absolute;
     display:block;
     padding:0px 0;
-    border:2px solid #a55000;
+    border:2px solid #443597;
     border-radius:8px;
-    box-shadow:1px 1px 2px #CE6400;
+    box-shadow:1px 1px 2px #1c3ba6;
     width: 200px;
 }
 
@@ -799,7 +803,7 @@ table.popup-table .link{
 }
 
 .context-menu-items a:hover{
-    background: #a55000;
+    background: #2400a5;
 }
 
 
@@ -1370,7 +1374,7 @@ body.resizing .resize-handle {
     flex-basis: 100%;
 }
 /* Buttons for directories. */
-.extra-network-tree .tree-list-content-dir {}   
+.extra-network-tree .tree-list-content-dir {}
 
 /* Buttons for files. */
 .extra-network-tree .tree-list-item--has-subitem .tree-list--subgroup > li:first-child {
